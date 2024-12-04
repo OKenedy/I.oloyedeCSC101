@@ -1,6 +1,25 @@
 fn main() {
-    let mut arr = [10, 20, 30, 40];
-    let slice = &mut arr[1..3];
-    slice[0] = 50;
-    println!("Modified Array: {:?}", arr);
+    // An array of numbers
+    let numbers = [1, 2, 3, 4, 5];
+    println!("Original array = {:?}", numbers);
+
+    // Create a slice of 2nd and 3rd element
+    let slice1 = &numbers[1..3];
+    println!("2nd and 3rd elements sliced = {:?}", slice1);
+
+    // Omit the start index
+    let slice2 = &numbers[..3];
+    // This means the slice starts from index 0 and goes up to index 3 (exclusive)
+    println!("index 0 to index 3 sliced = {:?}", slice2);
+
+    // Omit the end index
+    let slice3 = &numbers[2..];
+    // This means the slice starts from index 2 and goes up to index 5 (exclusive)
+    println!("index 2 to index 5 sliced = {:?}", slice3);
+
+    // Omit the start index and the end index
+    // reference the whole array
+    let slice4 = &numbers[..];
+    // This means the slice starts from index 0 and goes up to index 5 (exclusive).
+    println!("index 0 to index 5 sliced = {:?}", slice4);
 }
