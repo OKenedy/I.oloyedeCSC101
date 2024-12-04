@@ -1,5 +1,12 @@
 fn main() {
-    let arr = [1, 2, 3, 4, 5];
-    let slice = &arr[1..4];
-    println!("Slice: {:?}", slice);
+    let b: (i32, bool, f64) = (30, true, 4.9);
+    print(b);
+}
+
+fn print(x: (i32, bool, f64)) {
+    println!("Inside print method");
+
+    // assigns a tuple to distinct variables
+    let (age, is_male, cgpa) = x;
+    println!("Age is {} isMale? {}, cgpa is {}", age, is_male, cgpa);
 }
