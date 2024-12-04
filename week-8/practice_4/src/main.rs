@@ -1,6 +1,6 @@
 fn main() {
-    let vec = vec![1, 2, 3, 4, 5];
-    for val in vec.iter() {
-        println!("Value: {}", val);
-    }
+    let mut vec = vec![1, 2, 3];
+    vec.push(4);
+    vec.push(5);
+    println!("Updated Vector: {:?}", vec);
 }
